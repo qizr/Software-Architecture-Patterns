@@ -1,7 +1,7 @@
 #Software Architecture Patterns翻译
 
 最近看再看阮一峰的一篇[博客](http://www.ruanyifeng.com/blog/2016/09/software-architecture.html)提到了一本书[《Software Architecture Patterns》](http://www.oreilly.com/programming/free/software-architecture-patterns.csp)（[PDF](http://www.oreilly.com/programming/free/files/software-architecture-patterns.pdf)）
-,写的不错,虽然英语很屎,试着翻(gu)译(ge)一下,总得找点有趣的事情zuo吧。以下为翻译的内容，祝我能够翻译完，并借此机会能够加深对架构的认识。
+,写的不错,虽然英语很屎,试着翻(gu)译(ge)一下。以下为翻译的内容，祝我能够翻译完，并借此机会能够加深对架构的认识。
 
 ![Software Architecture Patterns 封面](http://upload-images.jianshu.io/upload_images/1650675-8bcf0ffe6f6bfc71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
