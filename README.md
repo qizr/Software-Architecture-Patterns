@@ -13,7 +13,41 @@ ps:[  ]中的话是我说的。
 [鸟窝的博客](http://colobu.com/2015/04/08/software-architecture-patterns/)
 
 -----
+目录
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+
+- [介绍](#%E4%BB%8B%E7%BB%8D)
+- [1.分层架构(Layered Architecture)](#1%E5%88%86%E5%B1%82%E6%9E%B6%E6%9E%84layered-architecture)
+  - [模式描述(Pattern Description)](#%E6%A8%A1%E5%BC%8F%E6%8F%8F%E8%BF%B0pattern-description)
+  - [关键概念(Pattern Description)](#%E5%85%B3%E9%94%AE%E6%A6%82%E5%BF%B5pattern-description)
+  - [架构例子(Pattern Example)](#%E6%9E%B6%E6%9E%84%E4%BE%8B%E5%AD%90pattern-example)
+  - [注意事项(Considerations)](#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9considerations)
+  - [模式分析(Pattern Analysis)](#%E6%A8%A1%E5%BC%8F%E5%88%86%E6%9E%90pattern-analysis)
+- [2.事件驱动架构(Event-Driven Architecture)](#2%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8%E6%9E%B6%E6%9E%84event-driven-architecture)
+  - [Mediator拓扑(Mediator Topology)](#mediator%E6%8B%93%E6%89%91mediator-topology)
+  - [Broker拓扑架构[broker就是代理的意思]](#broker%E6%8B%93%E6%89%91%E6%9E%B6%E6%9E%84broker%E5%B0%B1%E6%98%AF%E4%BB%A3%E7%90%86%E7%9A%84%E6%84%8F%E6%80%9D)
+  - [注意事项(Considerations)](#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9considerations-1)
+  - [模式分析(Pattern Analysis)](#%E6%A8%A1%E5%BC%8F%E5%88%86%E6%9E%90pattern-analysis-1)
+- [3.微内核架构 (Microkernel Architecture)](#3%E5%BE%AE%E5%86%85%E6%A0%B8%E6%9E%B6%E6%9E%84-microkernel-architecture)
+  - [模式描述(Pattern Description)](#%E6%A8%A1%E5%BC%8F%E6%8F%8F%E8%BF%B0pattern-description-1)
+  - [模式例子(Pattern Examples)](#%E6%A8%A1%E5%BC%8F%E4%BE%8B%E5%AD%90pattern-examples)
+  - [结论(Considerations)](#%E7%BB%93%E8%AE%BAconsiderations)
+  - [模式分析(Pattern Analysis)](#%E6%A8%A1%E5%BC%8F%E5%88%86%E6%9E%90pattern-analysis-2)
+- [4.微服务架构(Microservices Architecture Pattern)](#4%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84microservices-architecture-pattern)
+  - [模式拓扑(Pattern Topologies)](#%E6%A8%A1%E5%BC%8F%E6%8B%93%E6%89%91pattern-topologies)
+  - [避免依赖和编排(Avoid Dependencies and Orchestration)](#%E9%81%BF%E5%85%8D%E4%BE%9D%E8%B5%96%E5%92%8C%E7%BC%96%E6%8E%92avoid-dependencies-and-orchestration)
+  - [注意事项(Considerations)](#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9considerations-2)
+  - [模式分析(Pattern Analysis)](#%E6%A8%A1%E5%BC%8F%E5%88%86%E6%9E%90pattern-analysis-3)
+- [5.云架构(Space-Based Architecture)](#5%E4%BA%91%E6%9E%B6%E6%9E%84space-based-architecture)
+  - [模式描述(Pattern Description)](#%E6%A8%A1%E5%BC%8F%E6%8F%8F%E8%BF%B0pattern-description-2)
+  - [Pattern Dynamics](#pattern-dynamics)
+  - [注意事项(Considerations)](#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9considerations-3)
+  - [模式分析(Pattern Analysis)](#%E6%A8%A1%E5%BC%8F%E5%88%86%E6%9E%90pattern-analysis-4)
+- [附录A](#%E9%99%84%E5%BD%95a)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 # 介绍
 开发人员在没有合适架构的情况下开始编写程序是非常普遍的情况. 在这种情况下,大多数开发人员和架构师会采用传统分层架构模式（也称为n层架构),通过将源码模块分成各种包来表示抽象层。不幸的是，这种做法经常导致的是一个混乱的源码结构，它们缺乏明确的角色，职责和彼此之间的关系。 这通常被称为反模式的大泥球。
 
@@ -181,7 +215,7 @@ Broker拓扑不同于mediator拓扑，因为没有中心事件mediator,消息通
 
 # 3.微内核架构 (Microkernel Architecture)
 微内核架构模式（有时称为插件架构模式）是实现基于产品的应用程序所使用的模式。 基于产品的应用程序是作为典型的第三方产品被打包并提供下载的应用程序。 然而，许多公司也开发和发布其内部业务应用程序，如软件产品，完整版本，发行说明和可插拔功能。 这些也是这种模式的典型应用。 微内核架构模式允许您将附加应用程序功能作为插件添加到核心应用程序，提供可扩展性以及功能分离和隔离。
-## 架构描述
+## 模式描述(Pattern Description)
 微内核架构模式由两种类型的架构组件组成：核心系统和插件模块。业务逻辑分开在独立插件模块和基本核心系统之间，这种方式提供功能和业务逻辑的可扩展性，灵活性和隔离的特点。 图3-1说明了基本微内核架构模式.
 
 ![图3-1 微核架构设计](http://upload-images.jianshu.io/upload_images/1650675-b535875e9e2d483b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
