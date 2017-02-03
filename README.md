@@ -7,6 +7,8 @@
 
 ps:建议看英文原著。
 ps:[  ]中的话是我说的。
+ps:好吧,我找到已经有一个翻译版本了(https://github.com/hehonghui/android-tech-frontier/tree/master/software-architecture-patterns) 
+早看到就不翻译了......
 
 参考:
 [阮一峰的博客](http://www.ruanyifeng.com/blog/2016/09/software-architecture.html)
