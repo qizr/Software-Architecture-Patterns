@@ -5,8 +5,8 @@
 
 ![Software Architecture Patterns 封面](http://upload-images.jianshu.io/upload_images/1650675-8bcf0ffe6f6bfc71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-ps:建议看英文原著。
-ps:[  ]中的话是我说的。
+ps:建议看英文原著.
+ps:[  ]中的话是我说的.
 ps:好吧,我找到已经有一个翻译版本了(https://github.com/hehonghui/android-tech-frontier/tree/master/software-architecture-patterns) 
 早看到就不翻译了......
 
